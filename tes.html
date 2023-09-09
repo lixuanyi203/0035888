@@ -1,0 +1,64 @@
+<!DOCTYPT html>
+<html>
+<body>
+<head>
+<title>烟花效果</title>
+<style>
+body{
+background-color:black;
+canvas{
+display:block;
+position:absolute;
+top:0;
+left:0;
+}
+</style>
+<canvas id="canvas"></canvas>
+<script>
+const canvas=document.getElemntById("canvas ");
+const ctx=canvas.getContext("2d");
+let w ,h particle;
+class particle{
+construtor(){
+this.x =Math.random()*w;
+this .y =Math.random()*h;
+this .vx=Math.randoom()*10-5;
+this.radius=Math.random()*3+1;
+this.color=`rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
+draw(){
+ctx.beginPath();
+ctx.arc(this.x,this.y,this.radius,0,Math.PI*2,false);
+ctx.fillstyle=this.color;
+cxt.fill();
+}
+updata(){
+this.x += this.vx;
+this.y+ =this .vy:
+if ( this.x<0 || this.x> w){ this.vx=-this.vxthis .vy=this.vy
+if (this .y<0|| this.y>H){
+
+function int(){
+}
+w =canvas.width=window.innerWidth;
+h =canvas.height=window.innerHeight;
+particicles=[];
+for (let i =0; i < 100 i ++){
+particicles.push(new particicles());
+function draw(){
+ctx.clearRect(0,0,w,h );
+particicles.forEach(p => p.draw());
+particicles.forEach(p => p.updata());
+requesAnimationFrme(draw);
+
+
+}
+
+
+}
+int();
+draw();
+}
+</script>
+</body>
+</html>
+</head>
